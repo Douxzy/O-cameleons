@@ -1,104 +1,261 @@
-body {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+*{
+    box-sizing: border-box;
+  }
+  
+  body{
     background-color: #2F3848;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .wrapper{
     width: 900px;
-}
-
-.header__title{
     margin: auto;
+    overflow: hidden; /* évite les débords de cette boite (grande image ici) - temporaire, le temps de caler les choses */
+  }
+  
+  .page-header__title{
+    color: #ffffff;
     background-color: #F05768;
-    border-radius: 0px 0px 5px 5px;
-    color: white;
-    font-weight: 900;
-    font-size: 3rem;
-    font-style: italic;
-    border-bottom: solid 4px #ffffff;
+    border-bottom: solid 4px #ADD8E6;
+    border-radius: 0 0 2px 2px;
     text-align: center;
-}
-
-.coeur{
-    font-size: 4.2rem;
-}
-.nav{
-    display: inline-flex;
-}
-.nav__link{
-    color: #9acd32;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5em;
-    padding: 15px;
-}
-.nav__icon{
-    display: inline-flex;
-    justify-content: flex-end;
-}
-.nav__icon--1{
-    height: 30px;
-    padding: 5px;
-}
-
-.main__H2{
-    color: #0099cc;
+    font-size: 2.5rem;
     font-style: italic;
-    font-size: 2rem;
-}
-.main__title{
+    font-weight: bold;
+    line-height: 1;
+    padding-bottom: 0.4em;
+  }
+  
+  .page-header__lettrine {
+    position: relative;
+    bottom: 6px;
+    font-size: 0.8em;
+  }
+  
+  .coeur{
     display: inline-block;
+    font-size: 1.3em;
+    transition: all 1s ease-in-out;
+  }
+  
+  /* j'aimerai définir l'apparence du coeur quand je survole le titre ! 
+  - sélectionner le titre : .page-header__title
+  - sélectionner le titre survolé : .page-header__title:hover
+  - sélectionner le coeur dans le titre 
+  - sélectionner le coeur dans le titre : .page-header__title .coeur
+  - sélectionner le coeur dans le titre survolé : .page-header__title:hover .coeur
+  */
+  
+  /*
+   transformation css :  
+  */
+  .page-header__title:hover .coeur{    
+    color: red;
+    transform: scale(1.5);   
+  }
+  
+  
+  .main-nav{
+    padding:1em 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main-nav__menu{
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .main-nav__social{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .main-nav__link{
+    color: #8EC548;
+    font-weight: bold;
+    margin-right: 1em;
+    font-size: 1rem;
+    text-decoration: none;  
+  }
+  
+  /*
+  exemple avec float
+  */
+  /*
+  .main-nav__link--social img{
+    width: 1em;
+    float: right;
+    margin-left: 0.5rem;
+  }
+  */
+  
+  .main-nav__link--social{
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+  
+  .main-nav__link--social img{
+    width: 1em;  
+  }
+  
+  .intro__title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #00ccff;
+  }
+  
+  .intro__text{
+    color: #ffffff;
+    margin: 1em 0;
+  }
+  
+  .intro__link{
+    color: #8EC548;
+  }
+  
+  
+  /* exemple de positionnement en absolu par rapport à un élément positionné en relatif qui sert de référence */
+  .alaune{
+    position: relative;
+  }
+  
+  /* transition css : cf https://developer.mozilla.org/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions */
+  /* permet d'inquer comment doivent se dérouler les transition entre 2 états d'affichage */
+  .alaune__image{
+    width: 100%;
+    filter: grayscale(1);
+    transition-property: filter;
+    transition-duration: 2s;  
+  }
+  
+  /* la pseudo classe :hover correspond à l'état survolé de l'élément ciblé */
+  .alaune__image:hover{
+    filter: grayscale(0);
+  }
+  
+  /* 
+  animation css : cf https://developer.mozilla.org/fr/docs/Web/CSS/animation
+  
+  2 étapes : 
+  
+  - 1 - définir l'animation grâce à des images clés (@keyframes)
+  - 2 - indiquer dans une règle comment l'animation doit se jouer (nombre de fois, vitesse, etc.)
+  */
+  .alaune__caption{
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: #F05768;
     color: #ffffff;
-    padding: 6px;
-    text-transform: uppercase;
+    padding:0.5em;
     font-weight: bold;
-    position: absolute; 
-    margin: auto;
-}
-.main__article{
-    color: #ffffff;
-    font-weight: 600;
-}
-
-.main__img{
-    width: 100%;
-}
-.nav__linkscience{
-    color: #9acd32;
-}
-.main__section2{
-    background-color: #004488;
-    padding: 15px;
-    width: 150%;
-}
-.main__section2 h3{ 
-    color: #00ccff;
     text-transform: uppercase;
-    border-bottom: solid 2px #00ccff;
-    padding-bottom: 20px;
-
-}
-.main__section2 p, a{ 
-    color: #9acd32;
-}
-.main__image--1{
-    width: 300px;
-    height: 300px;
-}
-
-.main__content{
+    animation: 1s rotate;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(179deg); }
+    100%   { transform: rotate(0); }
+  }
+  
+  .gallery-and-user-engagement-container{
     display: flex;
     align-items: flex-start;
-    padding: 15px 0 15px 0;
-}
-.main__image--2{
-    width: 150px;
-    height: 150px;
-}
-.main__image--2{
-    margin: auto;
-}
-footer{
-    color: #ffffff;
+    justify-content: space-between;
+    padding: 30px 0 40px;
+  }
+  
+  .gallery{
+    width: 720px;
+  }
+  
+  .gallery__item{
+    float: left;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+  
+  .gallery__item:first-child{
+    /* calc nous permet d'effectuer des calculs - on gagne en plus en lisibilité */
+    width: calc(176px * 2 + 4px);
+  }
+  
+  .user-engagement{
+    width: 160px;
+    background-color: #004488;
+    padding: 10px;
+  }
+  
+  .user-engagement__title{
+    color: #00ccff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1em 0;
+    padding-bottom: 0.5em;
+    border-bottom: solid 1px #00ccff;  
+  }
+  
+  .user-engagement__text{
+    font-size: 0.6rem;
+    color: yellowgreen;
+    font-weight: bold;
+  }
+  
+  .user-engagement__link{
+    font-size: 0.6rem;
+    color: yellowgreen;
+    font-weight: bold;
+  }
+  
+  .page-footer{
+    padding: 40px 20px 20px;
+  }
+  
+  .page-footer__text{
     text-align: center;
-}
+    color: #00ccff;
+    font-size: 0.8rem;
+  }
+  
+  /* TIP CSSS : HTML to CSS autocompletion pour avoir une liste de classe existante dans un fichier html du projet */
+  
+  /* sélecteurs avancés - premier enfant correspondant à un sélecteur */
+  .gallery__item:first-child{
+    opacity: 0.5;
+  }
+  
+  /* sélecteurs avancés - nième enfant (ici - le 15ème) correspondant à un sélecteur */
+  .gallery__item:nth-child(15){
+    opacity: 0.5;
+  }
+  
+  /* sélecteurs avancés - nième enfant d'un certain type correspondant à un sélecteur */
+  .alaune__caption:first-of-type{
+    opacity: 0.5;
+  }
+  
+  /* sélecteurs avancés - nième enfant d'un certain type correspondant à un sélecteur */
+  .alaune__caption:nth-of-type(1){
+    opacity: 0.5;
+  }
+  
+  /* sélecteurs avancés - sélecteur d'enfant - pour sélectionner un élément directement enfant d'un autre */
+  .alaune > img{
+    /* opacity: 0.5; */   
+  }
+  
+  /* sélecteurs avancés - combinateur de voisin direct - pour sélectionner un élément qui en suis immédiatement un autre */
+  p + a{
+    opacity: 0.5;
+  }
+  
+  /* sélecteurs avancés - combinateur de voisins suivants - pour sélectionner un élément qui en suis (mais pas forcément immédiatement) un autre*/
+  p ~ a{
+    opacity: 0.5;
+  }
+  
+  

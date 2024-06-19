@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cameleons</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caméléons - le website</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=open-sans:400,400i,700,700i" rel="stylesheet" />
 </head>
 <body>
-    <header class="header">
-        <h1 class="header__title">J <span class="coeur">&hearts;</span> les caméléons!</h1>
-        <nav class="nav">
-            <a class="nav__link" href="#">About</a>
-            <a class="nav__link" href="#">Blog</a>
-            <a class="nav__link" href="#">Contact</a>
-            <div class="nav__icon">
-                <a class="nav__icon--1" href="#"><img src="../images/twitter_icon.png" alt="twitter"></a>
-                <a class="nav__icon--1" href="#"><img src="../images/facebook_icon.png" alt="Facebook"></a>
-            </div>
-        </nav>
+  <div class="wrapper">
+    <header class="page-header">
+      <h1 class="page-header__title"><span class="page-header__lettrine">J</span> <span class="coeur">&hearts;</span> les caméléons!</h1>
+      <nav class="main-nav">
+        <div class="main-nav__menu">
+          <a class="main-nav__link" href="#">About</a>
+          <a class="main-nav__link" href="#">Blog</a>
+          <a class="main-nav__link" href="#">Contact</a>
+        </div>        
+        <div class="main-nav__social">
+          <a class="main-nav__link main-nav__link--social" href="#"><img src="./images/twitter_icon.png" alt="twitter"></a>
+          <a class="main-nav__link main-nav__link--social" href="#"><img src="./images/facebook_icon.png" alt="Facebook"></a>
+        </div>        
+      </nav>
     </header>
-    <main class="main">
-        <article class="main__article">
-            <h2 class="main__H2">Trop de caméléons? nope.</h2>
-            <p> Ici nous pensons qu'il n'y aura jamais trop de caméléons, c'est mignon. Les caméléons, c'est pas con.
-                Les caméléons, ça sent le bonbon. il est <a class="nav__linkscience" href="#"> prouvé scientifiquement
-                </a> que regarder les caméléons tous les jours améliore la productivité et diminue le stress. Essayez !
-            </p>
-        </article>
-        <h2 class="main__title">Le caméléon de la semaine &#x2661 </h2>
-        <img class="main__img" src="../images/cameleon-big.jpg">
-        </img>
-        <div class="main__content">
-            <section class="main__photos">
-                <img class="main__image--1" src="../images/cameleon01.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon02.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon03.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon04.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon05.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon06.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon07.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon08.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon09.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon10.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon11.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon12.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon13.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon14.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon15.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon16.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon17.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon18.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon19.jpg" alt="cameleon trop mimi">
-                <img class="main__image--2" src="../images/cameleon20.jpg" alt="cameleon trop mimi">
-            </section>
-            <section class="main__section2">
-                <h3>Soumettez vos Photos de Cameleons!</h3>
-                <p>Vous avez trouvé une photo de caméléon tellement migonne que vous voulez la partager ? <a
-                        href="#">Partagez là ici !!</a></p>
-                <h3>Inscrivez-vous a notre newsletter !</h3>
-                <a href="#">Souscrivez ici.</a>
-            </section>
-        </div>
-    </main>
-    <footer class="footer">
-        <p>Copyright &#169; 2017 | &hearts; Caméléons</p>
-    </footer>
-</body>
+    <main class="page-main">
+      <section class="intro">
+        <h2 class="intro__title">Trop de Caméléons ? Nope.</h2>
+        <p class="intro__text">Ici nous pensons qu'il n'y aura jamais trop de caméléons, c'est mignon. Les caméléons, c'est pas con. Les caméléons, ça sent le bonbon. il est <a class="intro__link" href="#"> prouvé scientifiquement </a> que regarder les caméléons tous les jours améliore la productivité et diminue le stress. Essayez !</p>
+      </section>
+      <figure class="alaune">
+        <img class="alaune__image" src="./images/cameleon-big.jpg" alt="Le caméléon de la semaine &#9825;">
+        <figcaption class="alaune__caption">Le caméléon de la semaine &#9825;</figcaption>
+      </figure>
+      <div class="gallery-and-user-engagement-container">
+        <section class="gallery">
+          <!-- raccourci emmet : (img.gallery__item[src=./images/cameleon$.jpg][alt="caméléon $"])*20 -->
+          <img src="./images/cameleon01.jpg" alt="caméléon 01" class="gallery__item">
+          <img src="./images/cameleon02.jpg" alt="caméléon 02" class="gallery__item">
+          <img src="./images/cameleon03.jpg" alt="caméléon 03" class="gallery__item">
+          <img src="./images/cameleon04.jpg" alt="caméléon 04" class="gallery__item">
+          <img src="./images/cameleon05.jpg" alt="caméléon 05" class="gallery__item">
+          <img src="./images/cameleon06.jpg" alt="caméléon 06" class="gallery__item">
+          <img src="./images/cameleon07.jpg" alt="caméléon 07" class="gallery__item">
+          <img src="./images/cameleon08.jpg" alt="caméléon 08" class="gallery__item">
+          <img src="./images/cameleon09.jpg" alt="caméléon 09" class="gallery__item">
+          <img src="./images/cameleon10.jpg" alt="caméléon 10" class="gallery__item">
+          <img src="./images/cameleon11.jpg" alt="caméléon 11" class="gallery__item">
+          <img src="./images/cameleon12.jpg" alt="caméléon 12" class="gallery__item">
+          <img src="./images/cameleon13.jpg" alt="caméléon 13" class="gallery__item">
+          <img src="./images/cameleon14.jpg" alt="caméléon 14" class="gallery__item">
+          <img src="./images/cameleon15.jpg" alt="caméléon 15" class="gallery__item">
+          <img src="./images/cameleon16.jpg" alt="caméléon 16" class="gallery__item">
+          <img src="./images/cameleon17.jpg" alt="caméléon 17" class="gallery__item">
+          <img src="./images/cameleon18.jpg" alt="caméléon 18" class="gallery__item">
+          <img src="./images/cameleon19.jpg" alt="caméléon 19" class="gallery__item">
+          <img src="./images/cameleon20.jpg" alt="caméléon 20" class="gallery__item">
 
+        </section>
+        <aside class="user-engagement">
+          <h3 class="user-engagement__title">Soumettez vos Photos de Cameleons!</h3>
+          <p class="user-engagement__text">Vous avez trouvé une photo de caméléon tellement migonne que vous voulez la partager ?</p>
+          <a class="user-engagement__link" href="#">Partagez là ici !!</a>
+          <h3 class="user-engagement__title">Inscrivez-vous a notre newsletter !</h3>
+          <a class="user-engagement__link" href="#">Souscrivez ici.</a>
+        </aside>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <p class="page-footer__text">Copyright &#169; 2017 | &hearts; Caméléons</p>
+    </footer>
+  </div>
+</body>
 </html>
